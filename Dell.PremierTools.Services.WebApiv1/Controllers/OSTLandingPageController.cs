@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace Dell.PremierTools.Services.WebApi.Controllers
 {
+
     [Route("api/[controller]")]
     public class OSTLandingPageController : BaseApiController
     {
