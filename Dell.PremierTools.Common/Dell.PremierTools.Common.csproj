@@ -116,18 +116,14 @@
     <OutputPath>bin\Dev\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Constants\AttributeConstants.cs" />
-    <Compile Include="Constants\CommonConstant.cs" />
     <Compile Include="Data\DataAccessHelper.cs" />
     <Compile Include="Data\DataAccessHelperWrapper.cs" />
     <Compile Include="Data\DBParameter.cs" />
     <Compile Include="Data\IDataAccessHelperWrapper.cs" />
     <Compile Include="Data\SqlParameterCache.cs" />
-    <Compile Include="Enum\CommonEnumeration.cs" />
-    <Compile Include="ILogger.cs" />
-    <Compile Include="NLogger.cs" />
+    <Compile Include="Logger\ILogger.cs" />
+    <Compile Include="Logger\NLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shared\CommonShared.cs" />
     <Compile Include="Shared\PCFConfiguration.cs" />
     <Compile Include="Shared\PCFSetting.cs" />
   </ItemGroup>
