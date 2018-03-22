@@ -1,0 +1,10 @@
+﻿---
+applications:
+- name: ostservices-g3
+memory: 1G
+stack: windows2012R2
+buildpack: hwc_buildpack 
+health-check-type: none
+env:
+    conn_heartbeat: "Connection Timeout=60;Initial Catalog=ApplicationData;Data Source=G3VMDBPREM01.olqa.preol.dell.com;multiSubnetFailover=true;uid=ol_sqlmaint_tools;password=P@ssw0rd99;"
+    metadatacontext: "Connection Timeout=90;Initial Catalog=OST;Data Source=G3VMDBPREM01.olqa.preol.dell.com;multiSubnetFailover=true;uid=ol_sqlmaint_tools;password=P@ssw0rd99;"

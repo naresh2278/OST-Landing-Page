@@ -1,0 +1,10 @@
+﻿---
+applications:
+- name: ostservices-perf
+memory: 1G
+stack: windows2012R2
+buildpack: hwc_buildpack 
+health-check-type: none
+env:
+    conn_heartbeat: "Connection Timeout=60;Initial Catalog=ApplicationData;Data Source=PREMAGL01.olqa.preol.dell.com;multiSubnetFailover=true;uid=ol_sqlmaint_tools;password=pass;"
+    metadatacontext: "Connection Timeout=90;Initial Catalog=OST;Data Source=PREMAGL01.olqa.preol.dell.com;multiSubnetFailover=true;uid=ol_sqlmaint_tools;password=pass;"
