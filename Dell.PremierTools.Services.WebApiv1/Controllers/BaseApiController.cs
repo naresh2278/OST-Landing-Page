@@ -12,6 +12,7 @@ namespace Dell.PremierTools.OstServices.Controllers
         {
             get
             {
+
                 return !string.IsNullOrWhiteSpace(PCFConfiguration.GetEnvVariable(PCFConfiguration.APPLICATION_ENV_VARIABLE_NAME)) ? true : false;   
             }
         }
