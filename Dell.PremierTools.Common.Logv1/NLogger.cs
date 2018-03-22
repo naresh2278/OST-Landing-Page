@@ -61,11 +61,11 @@ namespace Dell.PremierTools.Common.Log
             logEventInfo.Properties["ActivityId"] = Trace.CorrelationManager.ActivityId;
             logEventInfo.Properties["AppDomain"] = AppDomain.CurrentDomain.FriendlyName;
          
-            if (HttpContext.Current != null)
-            {
-                logEventInfo.Properties["IP"] = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
-                if (HttpContext.Current.Request != null) logEventInfo.Properties["URL"] = HttpContext.Current.Request.Url.ToString();
-            }
+            //if (HttpContext.Current != null)
+            //{
+            //    logEventInfo.Properties["IP"] = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"] ?? HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
+            //    if (HttpContext.Current.Request != null) logEventInfo.Properties["URL"] = HttpContext.Current.Request.Url.ToString();
+            //}
         }
         private string MsgFormatter<T>(T sender, Exception ex, string message) => string.Format(@"{{""msgBody"":{0},""msgErr"":""{1}""}}", message ?? "",
                 (ex != null && !string.IsNullOrEmpty(ex.Message)) ? ex.Message : string.Empty);

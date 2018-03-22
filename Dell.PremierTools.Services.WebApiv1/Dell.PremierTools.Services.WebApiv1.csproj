@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GitHub" Version="1.11.4" />
     <PackageReference Include="JingSh.Swashbuckle.AspNetCore.Swagger" Version="2.3.5" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.3.0" />
@@ -26,8 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dell.PremierTools.Common.Log\Dell.PremierTools.Common.Log.csproj" />
-    <ProjectReference Include="..\Dell.PremierTools.Common\Dell.PremierTools.Common.csproj" />
+    <ProjectReference Include="..\Dell.PremierTools.Common.Logv1\Dell.PremierTools.Common.Log.csproj" />
+    <ProjectReference Include="..\Dell.PremierTools.Commonv1\Dell.PremierTools.Common.csproj" />
+    <ProjectReference Include="..\Dell.PremierTools.DataServices\Dell.PremierTools.DataServices.csproj" />
+    <ProjectReference Include="..\Dell.PremierTools.Entity\Dell.PremierTools.Entity.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

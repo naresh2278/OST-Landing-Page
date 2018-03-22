@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Dell.PremierTools.Common.Log;
+using System;
 using System.Configuration;
-using Dell.PremierTools.Common.Log;
 
 public static class PCFSetting
 {
@@ -16,7 +16,6 @@ public static class PCFSetting
         if (isInPCF) logger.LogDebug("PCFAccess Class", null, string.Format("Env[{0}]:{1}", key, PCFConfiguration.GetEnvVariable(key)));
         return isInPCF ? PCFConfiguration.GetEnvVariable(key) : Convert.ToString(ConfigurationManager.ConnectionStrings[key].ConnectionString);
     }
-
 
     public static bool isInPCF
     {
