@@ -1,0 +1,162 @@
+﻿{
+  "Header": {
+    "Source": {
+      "Type": null,
+      "Name": "SourceAppName",
+      "Url": null,
+      "Others": null
+    },
+    "Destination": {
+      "Type": [ "ado" ],
+      "Name": "destName",
+      "Url": null,
+      "Services": [
+        {
+          "Index": 0,
+          "Type": "ado",
+          "Name": "SavePayload",
+          "Provider": {
+            "Type": "MsSql",
+            "ConnectionString": "",
+            "CommandType": "StoredProcedure",
+            "CommandName": "Abcd",
+            "Execute": "nonquery",
+            "IsConnectionStringEncrypted": true,
+            "IsQueryEncrypted": false,
+            "IsCommandEncrypted": false
+          },
+          "Parameters": null
+        }
+      ]
+    },
+    "Channel": {
+      "Name": "channelName",
+      "Type": "RabbitMQ",
+      "Url": null
+    },
+    "TimeStamp": "2018-01-15 22:05:56 PM GMT+05:30"
+  },
+  "Operation": {
+    "Type": "batch",
+    "Name": "Dell.B2BOnlineTools.OfferDirector.Batch.SmartPriceCaching",
+    "Url": null,
+    "Services": [
+      {
+        "Index": 0,
+        "Type": "url",
+        "Name": "GetConfig",
+        "Provider": {
+          "Endpoint": "https://dma-g4.cfapps.pcf1.vc1.pcf.dell.com/api/dma/{0}/{1}/{2}/{3}/config/smartprice",
+          "IsEndPointEncrypted": false,
+          "Type": "WebApi",
+          "Method": "get",
+          "DataType": "application/json",
+          "Headers": null,
+          "IsHeadersEncrypted": false,
+          "Credential": null,
+          "IsCredentialEncrypted": true
+        },
+        "Parameters": [
+          {
+            "Index": 0,
+            "Name": "customersetId",
+            "DataType": "String",
+            "RegExp": "",
+            "Type": "url",
+            "DefaultValue": "g_8",
+            "IsValueEncrypted": false
+          },
+          {
+            "Index": 1,
+            "Name": "catalogId",
+            "DataType": "Int32",
+            "RegExp": "",
+            "Type": "url",
+            "DefaultValue": 8,
+            "IsValueEncrypted": false
+          },
+          {
+            "Index": 2,
+            "Name": "orderCode",
+            "DataType": "String",
+            "RegExp": "",
+            "Type": "url",
+            "DefaultValue": null,
+            "IsValueEncrypted": false
+          },
+          {
+            "Index": 3,
+            "Name": "languageId",
+            "DataType": "Int32",
+            "RegExp": "",
+            "Type": "url",
+            "DefaultValue": null,
+            "IsValueEncrypted": false
+          }
+        ]
+      }
+    ]
+  },
+  "Body": {
+    "Items": {
+      "Arguments": [
+        {
+          "Index": 0,
+          "Name": "customersetId",
+          "DataType": "String",
+          "IsValueEncrypted": false
+        },
+        {
+          "Index": 1,
+          "Name": "catalogId",
+          "DataType": "Int32",
+          "IsValueEncrypted": false
+        },
+        {
+          "Index": 2,
+          "Name": "orderCode",
+          "DataType": "String",
+          "IsValueEncrypted": false
+        },
+        {
+          "Index": 3,
+          "Name": "languageId",
+          "DataType": "Int32",
+          "IsValueEncrypted": false
+        }
+      ],
+      "Values": [
+        [ "g_8", 8, "CUP5810XLW7PM", 5 ],
+        [ "g_8", 8, "DST_Latitude_100_Automation", 1 ]
+      ]
+    },
+    "Constants": {
+      "Arguments": [
+        {
+          "Index": 0,
+          "Name": "ExceptionQueueParameterValues",
+          "DataType": "String"
+        }
+      ],
+      "Values": [
+        [
+          {
+            "property": {
+              "delivery_mode": 2,
+              "content-type": "application/json"
+            }
+          },
+          {
+            "routing_key": "errorHi"
+          },
+          {
+            "payload_encoding": "string"
+          },
+          {
+            "payload": "{message}"
+          }
+        ]
+      ]
+    }
+  }
+}

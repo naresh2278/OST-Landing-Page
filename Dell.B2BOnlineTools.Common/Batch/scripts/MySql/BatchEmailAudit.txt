@@ -1,0 +1,8 @@
+﻿CREATE TABLE `cf_f109c20f_b462_43ca_b786_eeec445356c7`.`batch_email_audit` (
+  `queue_name` VARCHAR(127) NOT NULL,
+  `batch_id` VARCHAR(127) NOT NULL,
+  `batch_index` INT NOT NULL,
+  `sent_object` VARCHAR(8000) NULL,
+  `sent_at` DATETIME NULL,
+  `sent_status` VARCHAR(127) NULL,
+  PRIMARY KEY (`queue_name`, `batch_id`, `batch_index`));

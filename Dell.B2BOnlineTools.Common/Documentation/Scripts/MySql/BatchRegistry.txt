@@ -1,0 +1,6 @@
+﻿CREATE TABLE `cf_466aa4ce_7ac9_4c7e_8827_5f0a3e7ddd19`.`batch_registry` (
+  `queue_name` VARCHAR(100) NOT NULL,
+  `batch_id` VARCHAR(100) NOT NULL,
+  `current_batch_index` INT NULL,
+  `last_update` DATETIME NULL,
+  PRIMARY KEY (`queue_name`, `batch_id`));

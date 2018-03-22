@@ -1,11 +1,11 @@
-﻿using Dell.PremierTools.OstServices.WebAPi.App_Start;
+﻿using Dell.B2BOnlineTools.Common.Configuration;
+using Dell.PremierTools.OstServices.WebAPi.App_Start;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.IO;
-using Dell.B2BOnlineTools.Common.Configuration;
 
 namespace Dell.PremierTools.Services.WebApi
 {

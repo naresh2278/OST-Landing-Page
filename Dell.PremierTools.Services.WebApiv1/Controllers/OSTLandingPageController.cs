@@ -16,7 +16,7 @@ namespace Dell.PremierTools.Services.WebApi.Controllers
         {
             // throw new MyAppException("My Custom Exception");
             throw new System.Exception();
-                return new string[] { "value1", "value2" };
+              //  return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5

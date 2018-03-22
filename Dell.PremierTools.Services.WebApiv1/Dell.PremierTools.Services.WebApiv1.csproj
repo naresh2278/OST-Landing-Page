@@ -25,16 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dell.PremierTools.Common.Logv1\Dell.PremierTools.Common.Log.csproj" />
-    <ProjectReference Include="..\Dell.PremierTools.Commonv1\Dell.PremierTools.Common.csproj" />
+    <ProjectReference Include="..\Dell.B2BOnlineTools.Common\Dell.B2BOnlineTools.Common.csproj" />
+    <ProjectReference Include="..\Dell.PremierTools.Common\Dell.PremierTools.Common.csproj" />
     <ProjectReference Include="..\Dell.PremierTools.DataServices\Dell.PremierTools.DataServices.csproj" />
     <ProjectReference Include="..\Dell.PremierTools.Entity\Dell.PremierTools.Entity.Model.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Dell.B2BOnlineTools.Common">
-      <HintPath>bin\Debug\netcoreapp2.0\Dell.B2BOnlineTools.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
