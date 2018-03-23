@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Dell.PremierTools.Entity.Model.viewmodel;
 
 namespace Dell.PremierTools.DataServices.Premier
 {
-    interface  Ipremiercepage
+   public interface  Ipremiercepage
     {
-        void getpremierdata();
+        landingpageviewmodel getpremierlandingpagedetails(string emailaddress, string customer_set_id);
     }
 }

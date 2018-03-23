@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dell.PremierTools.Services.WebApiv1", "Dell.PremierTools.Services.WebApiv1\Dell.PremierTools.Services.WebApiv1.csproj", "{C25183AE-E331-4870-8F76-0A0619E7940C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dell.PremierTools.WebApi", "Dell.PremierTools.Services.WebApiv1\Dell.PremierTools.WebApi.csproj", "{C25183AE-E331-4870-8F76-0A0619E7940C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dell.PremierTools.Entity.Model", "Dell.PremierTools.Entity\Dell.PremierTools.Entity.Model.csproj", "{EB9DF3C4-C25A-4064-B4A4-4B09D7537A17}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dell.PremierTools.DataServices", "Dell.PremierTools.DataServices\Dell.PremierTools.DataServices.csproj", "{082A5CC7-53D4-45F0-9406-71C3117C320B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dell.B2BOnlineTools.Common", "Dell.B2BOnlineTools.Common\Dell.B2BOnlineTools.Common.csproj", "{561AD524-2F62-425C-BF84-9F26FA64091A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dell.PremierTool.Shared", "Dell.B2BOnlineTools.Common\Dell.PremierTool.Shared.csproj", "{561AD524-2F62-425C-BF84-9F26FA64091A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dell.PremierTools.Common", "Dell.PremierTools.Common\Dell.PremierTools.Common.csproj", "{0FBAD717-BCE5-4201-91A9-86B8E8EBEDCB}"
 EndProject

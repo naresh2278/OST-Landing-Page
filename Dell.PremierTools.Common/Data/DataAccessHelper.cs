@@ -122,80 +122,80 @@ namespace Dell.PremierTools.Common.Data
         /// </summary>
         /// <param name="key">Connectionstring ame </param>
         /// <returns></returns>
-        private static string GetPremierOwnedCatalog(string key)
-        {
-            string initialCatalog = null;
+        //private static string GetPremierOwnedCatalog(string key)
+        //{
+        //    string initialCatalog = null;
 
-            switch (key)
-            {
-                case "DB_ICU":
-                case "DB_PREMIER":
-                case "DB_RLCM_STORESTAGING":
-                case "DB_GLOBALPREMIER":
-                case "DB_GLOBALRLCM_STORESTAGING":
-                case "DB_GLOBALICU":
-                case "DB_MasterPREMIERCE":
-                case "conn_WorkflowApp":
-                case "conn_PMU":
-                case "conn_PCE":
-                case "conn_ICU":
-                case "conn_SS":
-                case "conn_WorkflowApp_Staging":
-                case "conn_PCE_Staging":
-                case "conn_ICU_Staging":
-                case "conn_SS_Staging":
-                case "conn_PMU_Staging":
-                case "dsn_Premier":
-                case "HedgeRatesConnectionString":
-                case "PremierCEConnectionString":
-                case "conn_PCE_LongRunningQuery":
-                    {
-                        initialCatalog = "PremierCE";
-                        break;
-                    }
+        //    switch (key)
+        //    {
+        //        case "DB_ICU":
+        //        case "DB_PREMIER":
+        //        case "DB_RLCM_STORESTAGING":
+        //        case "DB_GLOBALPREMIER":
+        //        case "DB_GLOBALRLCM_STORESTAGING":
+        //        case "DB_GLOBALICU":
+        //        case "DB_MasterPREMIERCE":
+        //        case "conn_WorkflowApp":
+        //        case "conn_PMU":
+        //        case "conn_PCE":
+        //        case "conn_ICU":
+        //        case "conn_SS":
+        //        case "conn_WorkflowApp_Staging":
+        //        case "conn_PCE_Staging":
+        //        case "conn_ICU_Staging":
+        //        case "conn_SS_Staging":
+        //        case "conn_PMU_Staging":
+        //        case "dsn_Premier":
+        //        case "HedgeRatesConnectionString":
+        //        case "PremierCEConnectionString":
+        //        case "conn_PCE_LongRunningQuery":
+        //            {
+        //                initialCatalog = "PremierCE";
+        //                break;
+        //            }
 
-                case "conn_MyDell":
-                case "conn_MyDell_Staging":
-                    {
-                        initialCatalog = "MyDell";
-                        break;
-                    }
-                case "DB_CACHE_ACTIVE":
-                case "DB_CACHE_US":
-                case "DB_CACHE_EMEA":
-                case "conn_DsnXmlCache":
-                case "conn_CACHE":
-                case "DB_CACHE_APJ":
-                    {
-                        initialCatalog = "XMLcache";
-                        break;
-                    }
-                case "DB_CACHE_STAGING":
-                case "DB_CACHE_GlobalStaging":
-                case "conn_STGCACHE":
-                    {
-                        initialCatalog = "XMLCachePreview";
-                        break;
-                    }
-                case "DB_APPLICATION":
-                case "conn_ApplicationData":
-                    {
-                        initialCatalog = "ApplicationData";
-                        break;
-                    }
-                case "MetadataContext":
-                    {
-                        initialCatalog = "OST";
-                        break;
-                    }
+        //        case "conn_MyDell":
+        //        case "conn_MyDell_Staging":
+        //            {
+        //                initialCatalog = "MyDell";
+        //                break;
+        //            }
+        //        case "DB_CACHE_ACTIVE":
+        //        case "DB_CACHE_US":
+        //        case "DB_CACHE_EMEA":
+        //        case "conn_DsnXmlCache":
+        //        case "conn_CACHE":
+        //        case "DB_CACHE_APJ":
+        //            {
+        //                initialCatalog = "XMLcache";
+        //                break;
+        //            }
+        //        case "DB_CACHE_STAGING":
+        //        case "DB_CACHE_GlobalStaging":
+        //        case "conn_STGCACHE":
+        //            {
+        //                initialCatalog = "XMLCachePreview";
+        //                break;
+        //            }
+        //        case "DB_APPLICATION":
+        //        case "conn_ApplicationData":
+        //            {
+        //                initialCatalog = "ApplicationData";
+        //                break;
+        //            }
+        //        case "MetadataContext":
+        //            {
+        //                initialCatalog = "OST";
+        //                break;
+        //            }
 
-                default:
-                    initialCatalog = null;
-                    break;
-            }
+        //        default:
+        //            initialCatalog = null;
+        //            break;
+        //    }
 
-            return initialCatalog;
-        }
+        //    return initialCatalog;
+        //}
 
         /// <summary>
         /// Retrieves the connection string associated with the passed in Sql Server connectionstring name
@@ -212,7 +212,7 @@ namespace Dell.PremierTools.Common.Data
             string premierOwnedCatalog = null;
 
             // Below code added for the Service Account Login
-            premierOwnedCatalog = GetPremierOwnedCatalog(connectionStringIdentifier);
+            premierOwnedCatalog = connectionStringIdentifier;  //GetPremierOwnedCatalog(connectionStringIdentifier);
 
             //If the Retry Interval and the Maximum number of retries are cached, get them from the cache.
             if (ValueCache[connectionStringIdentifier + "RetryInterval"] != null && ValueCache[connectionStringIdentifier + "MaxRetries"] != null)

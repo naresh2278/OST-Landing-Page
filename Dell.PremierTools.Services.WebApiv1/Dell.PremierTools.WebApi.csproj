@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dell.B2BOnlineTools.Common\Dell.B2BOnlineTools.Common.csproj" />
+    <ProjectReference Include="..\Dell.B2BOnlineTools.Common\Dell.PremierTool.Shared.csproj" />
     <ProjectReference Include="..\Dell.PremierTools.Common\Dell.PremierTools.Common.csproj" />
     <ProjectReference Include="..\Dell.PremierTools.DataServices\Dell.PremierTools.DataServices.csproj" />
     <ProjectReference Include="..\Dell.PremierTools.Entity\Dell.PremierTools.Entity.Model.csproj" />

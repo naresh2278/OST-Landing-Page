@@ -6,6 +6,6 @@ stack: windows2012R2
 buildpack: hwc_buildpack 
 health-check-type: none
 env:
-    premierconnectionstring: "Connection Timeout=90;Initial Catalog=OST;Data Source=PREMAGL01.olqa.preol.dell.com;multiSubnetFailover=true;uid=ol_sqlmaint_tools;password=RDB3+$hzS#N[pMD;"
+    ost_premier_connectionstring: "Connection Timeout=90;Initial Catalog=OST;Data Source=PREMAGL01.olqa.preol.dell.com;multiSubnetFailover=true;uid=ol_sqlmaint_tools;password=RDB3+$hzS#N[pMD;"
     conn_configserver_connectionstring: "Connection Timeout=1800; Initial Catalog=ConfigStaging;Data Source=DBCATALOGSTG.EURO.DELL.COM;Failover ParmultiSubnetFailover=true;uid=service_globaltools;password=pass;"
  
